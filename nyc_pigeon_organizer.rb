@@ -12,16 +12,14 @@ def nyc_pigeon_organizer(data)
     }
     i += 1
     end
-   #binding.pry
-   
   end
+  
   data[:color].each do |key, value|
     i = 0 
     while i < value.length do
       new_hash[value[i]][:color].push(key.to_s)
       i += 1
     end
-    #binding.pry
   end
   
   data[:lives].each do |key, value|
@@ -30,7 +28,6 @@ def nyc_pigeon_organizer(data)
      new_hash[value[i]][:lives] = [key]
       i += 1
     end
-    #binding.pry
   end
   
   new_hash
